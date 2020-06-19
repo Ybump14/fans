@@ -14,10 +14,9 @@ r = requests.post(url=url, json=data)
 load_data = json.loads(json.dumps(r.json()))
 userid = load_data["userPoint"]["userId"]
 gender = load_data["profile"]["gender"]  # gender=0为女生，gender=2为男生
-if (gender == 0):
-    gender = "女"
-else:
-    gener = "男"
 nickname = load_data["profile"]["nickname"]
-info = [userid, nickname, gender]
+birthday = load_data["profile"]["birthday"]
+city = load_data["profile"]["city"]
+province = load_data["profile"]["province"]
+info = [userid, nickname, gender,birthday,city,province]
 print(info)

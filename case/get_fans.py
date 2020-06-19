@@ -4,10 +4,8 @@ import time
 import json
 
 time = round(time.time() * 1000)
-limit = 12
+limit = 1
 lasttime = -1
-print(time)
-
 
 def get_fans_list():
     uid = 341496792
@@ -23,6 +21,5 @@ def get_fans_list():
     i = 0
     while (i < limit):
         userid = load_data['followeds'][i]["userId"]
-        print(userid)
         i = i + 1
     return userid
