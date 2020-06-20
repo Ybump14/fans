@@ -22,4 +22,3 @@ class Get_Fan_UserId(object):
             i = i + 1
         return useridData
 
-
