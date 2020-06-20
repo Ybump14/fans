@@ -36,5 +36,6 @@ class Get_fan_info(object):
         return info
 
 
+
 run = Get_fan_info()
 run.get_fan_info()
