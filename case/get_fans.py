@@ -14,6 +14,7 @@ class Get_Fan_UserId(object):
         limit = login.limit
         r = requests.post(url=url, json=data)
         load_data = json.loads(json.dumps(r.json()))
+        print(load_data)
         useridData = []
         i = 0
         while (i < limit):

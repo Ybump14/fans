@@ -14,10 +14,10 @@ class Get_fan_info(object):
         get_uid = Get_Fan_UserId()
         uidData = get_uid.get_fans()
         i = 0
-        limit = 10
+        limit = 1000
         for uid in uidData:
             uid = str(uid)
-            r=requests.get(url=url+"?uid="+uid)
+            r = requests.get(url=url + "?uid=" + uid)
             load_data = json.loads(json.dumps(r.json()))
             userid = (load_data["userPoint"]["userId"])
             gender = load_data["profile"]["gender"]
@@ -34,7 +34,6 @@ class Get_fan_info(object):
             print("userid=%s" % userid)
             info = [userid, nickname, gender, birthday, city, province]
         return info
-
 
 
 run = Get_fan_info()

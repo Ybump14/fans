@@ -19,13 +19,13 @@ class Login(object):
     def get_follweds_data(self):
         self.uid = 341496792
         self.time = round(time.time() * 1000)
-        self.limit = 10
+        self.limit = 1000
         self.lasttime = -1
         self.data = {
             "uid": self.uid,
             "time": self.time,
             "limit": self.limit,
-            "lasttime":self.lasttime
+            # "lasttime":self.lasttime
         }
         return self.data
 
